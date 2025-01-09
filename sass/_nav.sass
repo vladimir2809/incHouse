@@ -1,0 +1,42 @@
+.container-nav
+    display: grid
+    grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
+    grid-template-rows: 10rem
+    @media only screen and (max-width: 1020px)
+        grid-template-columns: [content-start] minmax(56rem, 100%) [content-end]
+    background: #E1EDE6
+
+.nav
+    grid-column: content-start / content-end
+    @include textGreenLight
+    font-weight: 700
+    align-content: center
+    display: grid
+    grid-template-columns: 13.1rem minmax(0.1rem, 1fr) 44.2rem
+    grid-template-rows: 10rem
+    //grid-gap: 0rem
+    padding: 3.2rem 1.5rem
+.logo
+    display: flex
+    align-items: center
+    grid-column: 1 / 2 
+    grid-row: 1 / 2
+    width: 14rem
+.menu
+    align-self: center
+    grid-column: 3 / 4
+    grid-row: 1 / 2
+    &__list
+        display: inline-block
+        list-style-type: none
+        width: 100%
+    &__item  
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 5.5rem         
+            //margin-rigth: 0rem
+    &__link
+        text-decoration: none 
+        @include textBlack
+        font-weight: 700 
+   
