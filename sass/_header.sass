@@ -1,0 +1,34 @@
+.container-header
+    display: grid
+    grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
+    grid-template-rows: 62rem
+.header
+    grid-column: content-start / content-end
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 62rem
+    &__img
+        grid-column: 1 / 2
+        grid-row: 1 / -1
+    &__right
+        grid-column: 2 / 3
+        grid-row: 1 / -1
+        align-content: center
+        width: 52rem
+        background-color: white//#E1EDE6
+        &__title-1
+            font-family: Raleway
+            font-size: 6rem
+            font-weight: 500
+            line-height: 6.6rem
+            font-weight: 700
+            text-align: left
+            color: $color-black
+            margin-bottom: 2.3rem
+            span
+                color: $color-green-light
+        &__paragraph
+            @include textGray
+            margin-bottom: 6rem
+
+       

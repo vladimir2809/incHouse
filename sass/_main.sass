@@ -1,0 +1,76 @@
+.main
+    @include grid-container
+    // display: grid
+    // grid-template-columns:[full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end]
+    // grid-template-rows: 10rem 100rem
+    // @media only screen and (max-width: 1020px)
+    //     grid-template-columns: [content-start] minmax(56rem, 100%) [content-end]
+.select-country
+    grid-column: content-start / content-end
+    display: grid
+    grid-template-columns: 26rem minmax(0.1rem, 1fr) 43.5rem
+    grid-template-rows: 10rem
+    align-content: center
+    &__title-1
+        grid-column: 1 / 2
+        font-family: Raleway
+        font-size: 4rem
+        font-weight: 500
+        line-height: 4.4rem
+        color: $color-black
+    &__list
+        grid-column: 3 / -1
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 2.7rem
+    &__radio
+        display: none
+    &__label
+        display: inline-block
+        font-size: 2rem
+        font-weight: 500
+        border: 1px solid #D4E8D9
+        background-color: #D4E8D9
+        border-radius: 2rem
+        padding: 1rem 2rem
+        color: $color-black
+    &__radio:checked + &__label
+        background-color: $color-green-light
+        color: white
+.container-cards
+    grid-column: content-start / content-end
+    display: grid
+    grid-template-columns: repeat(auto-fit, 32rem)
+    grid-template-rows: repeat(2, 68rem)
+    grid-gap: 3rem 3rem
+    justify-content: center
+.card
+    width: 32rem
+    height: 68rem
+    background-color: #E1EDE6
+    padding: 2rem
+    &__img
+        width: 28rem
+        margin-bottom: 2rem
+    &__author
+        @include textGray
+        font-size: 2rem
+        margin-bottom: 1rem
+    &__name
+        @include textBlack
+        font-size: 3rem
+        margin-bottom: 1.2rem
+    &__descr
+        @include textBlack
+        font-size: 1.8rem
+        margin-bottom: 3rem
+    &__price
+        @include textGreenLight
+        font-size: 2.4rem
+        margin-bottom: 2rem
+    &__button
+        width: 28rem
+        background-color: #E1EDE6
+        
+         

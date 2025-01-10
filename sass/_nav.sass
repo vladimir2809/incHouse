@@ -1,9 +1,10 @@
 .container-nav
-    display: grid
-    grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
-    grid-template-rows: 10rem
-    @media only screen and (max-width: 1020px)
-        grid-template-columns: [content-start] minmax(56rem, 100%) [content-end]
+    @include grid-container
+    // display: grid
+    // grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
+    // grid-template-rows: 10rem
+    // @media only screen and (max-width: 1020px)
+    //     grid-template-columns: [content-start] minmax(56rem, 100%) [content-end]
     background: #E1EDE6
 
 .nav
@@ -12,10 +13,10 @@
     font-weight: 700
     align-content: center
     display: grid
-    grid-template-columns: 13.1rem minmax(0.1rem, 1fr) 44.2rem
+    grid-template-columns: 13.1rem minmax(0.1rem, 1fr) 45.5rem
     grid-template-rows: 10rem
     //grid-gap: 0rem
-    padding: 3.2rem 1.5rem
+    //padding: 3.2rem 1.5rem
 .logo
     display: flex
     align-items: center
