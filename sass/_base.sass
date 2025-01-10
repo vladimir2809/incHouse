@@ -7,11 +7,11 @@ $color-green-dark: #376B44
     grid-template-columns:[full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end]
     //grid-template-rows: 10rem 160rem
     @media only screen and (max-width: 1030px)
-        grid-template-columns: [content-start] minmax(56rem, 100%) [content-end]
+        grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end]
 .container
     display: grid
     grid-template-columns: 100%
-    grid-template-rows: 10rem 62rem 156.5rem
+    grid-template-rows: 10rem 62rem max-content
 *, ::after, ::before
     margin: 0
     padding: 0
