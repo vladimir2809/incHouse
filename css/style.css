@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10rem 62rem -webkit-max-content 57.5rem 7rem 44rem;
-  grid-template-rows: 10rem 62rem max-content 57.5rem 7rem 44rem;
+  grid-template-rows: 10rem 62rem -webkit-max-content 57.5rem 7rem 44rem 7rem 17rem;
+  grid-template-rows: 10rem 62rem max-content 57.5rem 7rem 44rem 7rem 17rem;
 }
 
 *, ::after, ::before {
@@ -52,7 +52,7 @@ html {
 
 .container-nav {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
   grid-row: 1/2;
   background: #E1EDE6;
 }
@@ -88,6 +88,16 @@ html {
   grid-row: 1/2;
   width: 14rem;
 }
+.logo__img {
+  margin-right: 0.4rem;
+}
+.logo__text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.34rem;
+  text-align: left;
+  color: #598D66;
+}
 
 .menu {
   align-self: center;
@@ -117,7 +127,7 @@ html {
 
 .container-header {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
   grid-row: 2/3;
   display: grid;
   grid-template-rows: 62rem;
@@ -171,7 +181,7 @@ html {
 
 .main {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
   margin-bottom: 7rem;
   grid-row: 3/4;
 }
@@ -288,7 +298,7 @@ html {
 
 .container-new {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
   grid-row: 4/5;
   background-image: url(../img/newImg.png);
   background-repeat: no-repeat;
@@ -333,7 +343,7 @@ html {
 
 .container-ourTeam {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
   grid-row: 6/7;
 }
 @media only screen and (max-width: 1030px) {
@@ -345,7 +355,7 @@ html {
 .ourTeam {
   grid-column: content-start/content-end;
   display: grid;
-  grid-template-columns: 44.5rem 1fr;
+  grid-template-columns: 44rem 1fr;
   grid-gap: 3rem;
 }
 .ourTeam__cont-img {
@@ -378,4 +388,91 @@ html {
 }
 .ourTeam__photo-item {
   margin-right: 3rem;
+}
+
+.container-footer {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end];
+  grid-row: 8/9;
+  background-color: #E1EDE6;
+}
+@media only screen and (max-width: 1030px) {
+  .container-footer {
+    grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end];
+  }
+}
+
+.footer {
+  grid-column: content-start/content-end;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 17rem 0.5fr repeat(3) 1fr 13.2rem;
+}
+
+.contact {
+  width: 17rem;
+  grid-column: 1/2;
+}
+.contact .logo {
+  margin-bottom: 3.5rem;
+}
+.contact__telephone {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.3rem;
+  text-align: left;
+  color: #2C2D35;
+}
+.contact__paragraph {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  text-align: left;
+  color: #86928B;
+}
+
+.links_count_1 {
+  grid-column: 3/4;
+}
+
+.links__list {
+  list-style-type: none;
+}
+.links__item:first-child > a {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.3rem;
+  text-align: left;
+  color: #2C2D35;
+}
+.links__link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  text-align: left;
+  color: #86928B;
+}
+
+.network {
+  grid-column: 7/8;
+}
+.network__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.network__paragraph {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  text-align: left;
+  color: #86928B;
+}
+.network__paragraph_count_1 {
+  margin-bottom: 0.6rem;
 }

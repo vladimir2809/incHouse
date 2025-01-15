@@ -4,14 +4,14 @@ $color-green-light: #598D66
 $color-green-dark: #376B44
 @mixin  grid-container
     display: grid
-    grid-template-columns:[full-start] 1fr [content-start] 103rem [content-end] 1fr [full-end]
+    grid-template-columns:[full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end]
     //grid-template-rows: 10rem 160rem
     @media only screen and (max-width: 1030px)
         grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end]
 .container
     display: grid
     grid-template-columns: 100%
-    grid-template-rows: 10rem 62rem max-content calc(57.5rem) 7rem 44rem
+    grid-template-rows: 10rem 62rem max-content calc(57.5rem) 7rem 44rem 7rem 17rem
     //grid-gap: 7rem 0
 *, ::after, ::before
     margin: 0
