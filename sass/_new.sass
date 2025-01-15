@@ -1,5 +1,36 @@
 .container-new
     @include grid-container
-.new-img
-    grid-column: full-start / full-end
-    width: 100%
+    grid-row: 4 / 5
+    background-image: url(../img/newImg.png) 
+    background-repeat: no-repeat
+    background-size: cover 
+    
+    //height: 100vh
+.new
+    grid-column: content-start / content-end
+    padding: 7rem 1.5rem
+    &__cont-title
+        display: flex
+        margin-bottom: 2rem
+        //width: 5.9rem
+    &__img-star
+    &__title-3
+        //font-family: Raleway;
+        width: 52.5rem
+        font-size: 4rem
+        font-weight: 500
+        line-height: 4rem
+        //text-align: left
+        color: white
+    &__paragraph
+        width: 54rem
+        margin-bottom: 6rem
+        font-family: Raleway
+        font-size: 18px
+        font-weight: 500
+        line-height: 27px
+        text-align: left
+        color: white
+    &__button
+        background-color: #EEDB6D
+

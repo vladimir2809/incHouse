@@ -1,6 +1,8 @@
 .container-header
+    @include grid-container
+    grid-row: 2 / 3
     display: grid
-    grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
+    //grid-template-columns:[full-start] 1fr [content-start] repeat(6,[col-start] 17rem [col-end]) [content-end] 1fr [full-end]
     grid-template-rows: 62rem
 .header
     grid-column: content-start / content-end
@@ -16,6 +18,7 @@
         align-content: center
         width: 52rem
         background-color: white//#E1EDE6
+        padding-left: 3rem
         &__title-1
             font-family: Raleway
             font-size: 6rem
