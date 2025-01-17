@@ -2,16 +2,34 @@ $color-black: #2C2D35
 $color-gray: #86928B
 $color-green-light: #598D66
 $color-green-dark: #376B44
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 420px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 690px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1130px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
 @mixin  grid-container
     display: grid
-    grid-template-columns:[full-start] 1fr [content-start] 107rem [content-end] 1fr [full-end]
+    grid-template-columns:[full-start] 1fr [content-start] 111rem [content-end] 1fr [full-end]
     //grid-template-rows: 10rem 160rem
-    @media only screen and (max-width: 1030px)
+    @include respond(tab-land)
         grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end]
 .container
     display: grid
     grid-template-columns: 100%
     grid-template-rows: 10rem 62rem max-content calc(57.5rem) 7rem 44rem 7rem 17rem
+    @include respond(tab-land)
+        grid-template-rows: 10rem 38rem max-content calc(57.5rem) 7rem 84rem 7rem //17rem
     //grid-gap: 7rem 0
 *, ::after, ::before
     margin: 0

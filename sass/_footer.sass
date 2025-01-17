@@ -6,13 +6,28 @@
     grid-column: content-start / content-end
     padding: 3rem 1.5rem
     display: grid
-    grid-template-columns: 17rem .5fr repeat(3, calc(max-content+6rem)) 1fr 13.2rem
-
+    grid-template-columns: 17rem .5fr repeat(3, calc(max-content + 6rem)) 1fr 13.2rem
+    grid-template-rows: 50% 50% 
+    @include respond(tab-land)
+        grid-template-columns: repeat(3, 15rem) 1fr 18rem
+        grid-template-rows: 50% 50%    
+.logo
+    //margin-bottom: 3.5rem
+    grid-column: 1 / 2
+    grid-row: 1 / 2
+    align-self: start
+    @include respond(tab-land)
+        grid-column: 1 / 2
+        grid-row: 1 / 2
 .contact
     width: 17rem
     grid-column: 1 / 2
-    .logo
-        margin-bottom: 3.5rem
+    grid-row: 2 / 3
+    align-self: start
+    @include respond(tab-land)
+        grid-column: 5 / 6
+        grid-row: 1 / 2
+   
     &__telephone
         font-size: 2.0rem
         font-weight: 500
@@ -27,6 +42,22 @@
         color: #86928B
 .links_count_1
     grid-column: 3 / 4
+    grid-row: 1 / -1
+    @include respond(tab-land)
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+.links_count_2
+    grid-column: 4 / 5
+    grid-row: 1 / -1
+    @include respond(tab-land)
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+.links_count_3
+    grid-column: 5 / 6
+    grid-row: 1 / -1
+    @include respond(tab-land)
+        grid-column: 3 / 4
+        grid-row: 2 / 3
 .links
     &__list
         list-style-type: none
@@ -52,6 +83,10 @@
         color: #86928B
 .network
     grid-column: 7 / 8 
+    @include respond(tab-land)
+        grid-column: 5 / 6
+        grid-row: 2 / 3
+        width: 50%
     &__list
         display: flex
         justify-content: space-between

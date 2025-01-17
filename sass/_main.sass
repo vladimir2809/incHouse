@@ -10,9 +10,10 @@
 .select-country
     grid-column: content-start / content-end
     display: grid
-    grid-template-columns: 26rem minmax(0.1rem, 1fr) 43.5rem
+    grid-template-columns: 20rem minmax(4.5rem, 1fr) 43.5rem
     grid-template-rows: 10rem
     align-content: center
+    margin: 0 1.2rem 0 1.2rem
     &__title-1
         grid-column: 1 / 2
         font-family: Raleway
@@ -20,6 +21,8 @@
         font-weight: 500
         line-height: 4.4rem
         color: $color-black
+        @include respond(tab-land)
+            font-size: 3rem
     &__list
         grid-column: 3 / -1
     &__item
@@ -43,17 +46,17 @@
 .container-cards
     grid-column: content-start / content-end
     display: grid
-    grid-template-columns: repeat(auto-fit, 32rem)
-    grid-template-rows: repeat(2, 68rem)
+    grid-template-columns: repeat(auto-fit, 35rem)
+    grid-template-rows: repeat(2, 73rem)
     grid-gap: 3rem 3rem
     justify-content: center
 .card
-    width: 32rem
-    height: 68rem
+    width: 35rem
+    // height: 68rem
     background-color: #E1EDE6
     padding: 2rem
     &__img
-        width: 28rem
+        width: 31rem
         margin-bottom: 2rem
     &__author
         @include textGray
