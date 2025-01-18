@@ -24,6 +24,8 @@ $color-green-dark: #376B44
     //grid-template-rows: 10rem 160rem
     @include respond(tab-land)
         grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end]
+    @include respond(tab-port)
+        grid-template-columns: [full-start content-start] minmax(51rem, 100%) [content-end full-end]
 .container
     display: grid
     grid-template-columns: 100%
