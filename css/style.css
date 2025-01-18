@@ -207,11 +207,24 @@ html {
     grid-template-rows: 38rem;
   }
 }
+@media only screen and (max-width: 690px) {
+  .header {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 38rem;
+  }
+}
 .header__img {
   grid-column: 1/2;
   grid-row: 1/-1;
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 690px) {
+  .header__img {
+    height: 85%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .header__right {
   grid-column: 2/3;
@@ -223,6 +236,14 @@ html {
   padding-left: 3rem;
 }
 @media only screen and (max-width: 1130px) {
+  .header__right {
+    width: 35rem;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    padding-top: 3.5rem;
+  }
+}
+@media only screen and (max-width: 690px) {
   .header__right {
     width: 35rem;
     -ms-flex-line-pack: start;
@@ -247,6 +268,13 @@ html {
     margin-bottom: 2rem;
   }
 }
+@media only screen and (max-width: 690px) {
+  .header__title-1 {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+}
 .header__title-1 span {
   color: #598D66;
 }
@@ -261,6 +289,11 @@ html {
 @media only screen and (max-width: 1130px) {
   .header__paragraph {
     margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .header__paragraph {
+    font-size: 1.6rem;
   }
 }
 
@@ -290,6 +323,12 @@ html {
       align-content: center;
   margin: 0 1.2rem 0 1.2rem;
 }
+@media only screen and (max-width: 690px) {
+  .select-country {
+    grid-template-columns: 43.5rem;
+    grid-template-rows: 5rem 8rem;
+  }
+}
 .select-country__title-1 {
   grid-column: 1/2;
   font-family: Raleway;
@@ -303,8 +342,19 @@ html {
     font-size: 3rem;
   }
 }
+@media only screen and (max-width: 690px) {
+  .select-country__title-1 {
+    grid-row: 1/2;
+  }
+}
 .select-country__list {
   grid-column: 3/-1;
+}
+@media only screen and (max-width: 690px) {
+  .select-country__list {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
 }
 .select-country__item {
   display: inline-block;
@@ -340,15 +390,51 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media only screen and (max-width: 1130px) {
+  .container-cards {
+    grid-template-columns: repeat(auto-fit, 33rem);
+  }
+}
+@media only screen and (max-width: 690px) {
+  .container-cards {
+    grid-template-columns: repeat(auto-fit, 24rem);
+    grid-template-rows: repeat(3, 54rem);
+  }
+}
 
 .card {
   width: 35rem;
+  height: 73rem;
   background-color: #E1EDE6;
   padding: 2rem;
+}
+@media only screen and (max-width: 1130px) {
+  .card {
+    width: 33rem;
+    height: 73rem;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .card {
+    width: 24rem;
+    height: 54rem;
+  }
 }
 .card__img {
   width: 31rem;
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 1130px) {
+  .card__img {
+    width: 29rem;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .card__img {
+    width: 20rem;
+    height: 25rem;
+    margin-bottom: 1.5em;
+  }
 }
 .card__author {
   font-family: Raleway;
@@ -359,6 +445,11 @@ html {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 690px) {
+  .card__author {
+    margin-bottom: 1rem;
+  }
+}
 .card__name {
   font-family: Raleway;
   font-size: 1.8rem;
@@ -368,6 +459,11 @@ html {
   font-size: 3rem;
   margin-bottom: 1.2rem;
 }
+@media only screen and (max-width: 690px) {
+  .card__name {
+    font-size: 2.4rem;
+  }
+}
 .card__descr {
   font-family: Raleway;
   font-size: 1.8rem;
@@ -376,6 +472,7 @@ html {
   color: #2C2D35;
   font-size: 1.8rem;
   margin-bottom: 3rem;
+  height: 3.8rem;
 }
 .card__price {
   font-family: Raleway;
@@ -387,8 +484,19 @@ html {
   margin-bottom: 2rem;
 }
 .card__button {
-  width: 28rem;
+  width: 31rem;
   background-color: #E1EDE6;
+}
+@media only screen and (max-width: 1130px) {
+  .card__button {
+    width: 28rem;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .card__button {
+    width: 20rem;
+    height: 5rem;
+  }
 }
 
 .container-new {

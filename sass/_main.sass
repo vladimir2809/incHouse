@@ -14,6 +14,9 @@
     grid-template-rows: 10rem
     align-content: center
     margin: 0 1.2rem 0 1.2rem
+    @include respond(tab-port)
+        grid-template-columns: 43.5rem
+        grid-template-rows: 5rem 8rem
     &__title-1
         grid-column: 1 / 2
         font-family: Raleway
@@ -23,8 +26,13 @@
         color: $color-black
         @include respond(tab-land)
             font-size: 3rem
+        @include respond(tab-port)
+            grid-row: 1 / 2
     &__list
         grid-column: 3 / -1
+        @include respond(tab-port)
+            grid-column: 1 / -1
+            grid-row: 2 / 3
     &__item
         display: inline-block
         &:not(:last-child)
@@ -50,32 +58,59 @@
     grid-template-rows: repeat(2, 73rem)
     grid-gap: 3rem 3rem
     justify-content: center
+    @include respond(tab-land)
+        grid-template-columns: repeat(auto-fit, 33rem)
+    @include respond(tab-port)
+        grid-template-columns: repeat(auto-fit, 24rem)
+        grid-template-rows: repeat(3, 54rem)
 .card
     width: 35rem
-    // height: 68rem
+    height: 73rem
     background-color: #E1EDE6
     padding: 2rem
+    @include respond(tab-land)
+        width: 33rem
+        height: 73rem
+    @include respond(tab-port)
+        width: 24rem
+        height: 54rem
     &__img
         width: 31rem
         margin-bottom: 2rem
+        @include respond(tab-land)
+            width: 29rem
+        @include respond(tab-port)
+            width: 20rem
+            height: 25rem
+            margin-bottom: 1.5em
     &__author
         @include textGray
         font-size: 2rem
         margin-bottom: 1rem
+        @include respond(tab-port)
+           margin-bottom: 1rem
     &__name
         @include textBlack
         font-size: 3rem
         margin-bottom: 1.2rem
+        @include respond(tab-port)
+            font-size: 2.4rem
     &__descr
         @include textBlack
         font-size: 1.8rem
         margin-bottom: 3rem
+        height: 3.8rem
     &__price
         @include textGreenLight
         font-size: 2.4rem
         margin-bottom: 2rem
     &__button
-        width: 28rem
+        width: 31rem
         background-color: #E1EDE6
+        @include respond(tab-land)
+            width: 28rem
+        @include respond(tab-port)
+            width: 20rem
+            height: 5rem
         
          
