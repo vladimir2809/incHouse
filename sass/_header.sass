@@ -9,6 +9,7 @@
     grid-column: content-start / content-end
     display: grid
     grid-template-columns: 50% 50%
+    justify-items: center
     //grid-template-rows: 62rem
     @include respond(tab-land)
         grid-template-rows: 38rem
@@ -29,13 +30,13 @@
         align-content: center
         width: 52rem
         background-color: white//#E1EDE6
-        padding-left: 3rem
+        padding-left: 0rem
         @include respond(tab-land)
-            width: 35rem
+            width: 33rem
             align-content: start
             padding-top: 3.5rem
         @include respond(tab-port)
-            width: 35rem
+            width: 28rem
             align-content: start
             padding-top: 3.5rem
     &__title-1
@@ -64,6 +65,13 @@
             margin-bottom: 4rem
         @include respond(tab-port)
             font-size: 1.6rem
+    &__button
+        @include respond(tab-land)
+            width: 21rem
+            height: 6rem    
+        @include respond(tab-port)
+            width: 18rem
+            height: 5rem
 
 
        
