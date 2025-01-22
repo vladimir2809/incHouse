@@ -4,7 +4,7 @@ $color-green-light: #598D66
 $color-green-dark: #376B44
 @mixin respond($breakpoint)
     @if $breakpoint == phone
-        @media only screen and (max-width: 420px)
+        @media only screen and (max-width: 510px)
             @content
 
     @if $breakpoint == tab-port
@@ -26,6 +26,8 @@ $color-green-dark: #376B44
         grid-template-columns: [full-start content-start] minmax(56rem, 100%) [content-end full-end]
     @include respond(tab-port)
         grid-template-columns: [full-start content-start] minmax(51rem, 100%) [content-end full-end]
+    @include respond(phone)
+        grid-template-columns: [full-start content-start] minmax(24rem, 100%) [content-end full-end]
 .container
     display: grid
     grid-template-columns: 100%

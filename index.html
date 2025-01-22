@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <title>incHouse</title>
 </head>
 <body>
@@ -22,7 +23,23 @@
                       
                     </ul>
                 </div>
-                <div class="basket">
+              
+                <div class="navigation">
+                    <input type="checkbox" class="hamburger__checkbox" id="checkbox-menu">
+                    <label for="checkbox-menu" class="hamburger__label">
+                        <div class="hamburger__label-div">
+                            <span></span>
+                        </div>
+                    </label>
+                    <div class="menu-phone">
+                        <ul class="menu-phone__list">
+                            <li class="menu-phone__item"><a href="#" class="menu-phone__link">Репродукции</a></li>
+                            <li class="menu-phone__item"><a href="#" class="menu-phone__link">Новинки</a></li>
+                            <li class="menu-phone__item"><a href="#" class="menu-phone__link">О нас</a></li>    
+                        </ul>
+                    </div>
+                </div>
+                <div class="basket" id="basket">
                     <a href="#" class="basket__link">
                         <img src="img/shopping-cart.svg" alt="" class="basket__logo">
                     </a>

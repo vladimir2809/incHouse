@@ -20,8 +20,11 @@
         grid-template-columns: 46.5rem 1fr
         grid-template-rows: 5rem 5rem
         justify-content: start
-    //grid-gap: 0rem
-    //padding: 3.2rem 1.5rem
+    @include respond(phone)
+        grid-template-columns: 1fr 
+        grid-template-rows: 5rem 5rem 100vh
+        //justify-content: space-evenly
+        //align-content: center
 
 .logo_in_nav
     grid-column: 1 / 2 
@@ -33,6 +36,32 @@
         grid-row: 1 / 2 //!important
         justify-self: center
 
+    @include respond(phone)
+        justify-self: center
+.navigation
+    grid-column: 1 / 2
+    grid-row: 3 / 4
+    background-color: transparent
+    z-index: 1
+.menu-phone
+    display: none
+    @include respond(phone)
+        position: relative
+        top: -2.5rem
+        background-color: #E1EDE6
+        width: 100%
+        height: 100vh
+        z-index: 100
+        padding: 3rem
+    &__list
+        list-style-type: none
+    &__item
+        margin-bottom: 5rem
+    &__link
+        text-decoration: none
+        color: $color-gray
+.hamburger__checkbox:checked ~ .menu-phone
+    display: block
 .menu
     align-self: center
     grid-column: 3 / 4
@@ -42,6 +71,8 @@
         grid-row: 2 / 3
         justify-self: start
         padding-left: 3.3rem
+    @include respond(phone)
+        display: none
     &__list
         display: inline-block
         list-style-type: none
@@ -58,6 +89,76 @@
         @include textBlack
         text-decoration: none 
         font-weight: 700 
+.hamburger
+    @include respond(tab-land)
+        display: none
+    @include respond(tab-port)
+        display: none
+    @include respond(phone)
+        display: inline-block
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        align-self: center
+        margin-left: 1.5rem
+.hamburger__checkbox
+    display: none
+.hamburger__label-div
+    display: none
+    position: relative
+    top: -4rem
+    left: 1.5rem
+    width: 3rem
+    height: 10px
+    @include respond(tab-land)
+        display: none
+    @include respond(tab-port)
+        display: none
+    @include respond(phone)
+        display: inline-block
+    &>span
+        display: block
+        position: relative
+        top: .6rem
+        border-bottom: 4px solid $color-green-light
+        opacity: 1
+        transition: 1s
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        top: -.6rem
+        width: 3rem
+        height: 10px
+        border-bottom: 4px solid $color-green-light
+        transition: 1s
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: .7rem
+        width: 3rem
+        height: 10px
+        border-bottom: 4px solid $color-green-light
+        transition: 1s
+.hamburger__checkbox:checked ~ .hamburger__label>.hamburger__label-div>span
+    @include respond(phone)
+        opacity: 0
+.hamburger__checkbox:checked ~ .hamburger__label>.hamburger__label-div::after
+    @include respond(phone)
+        transform: rotateZ(45deg) translateY(.7rem) 
+        
+.hamburger__checkbox:checked ~ .hamburger__label>.hamburger__label-div::before
+    @include respond(phone)
+        transform: rotateZ(-45deg) translateY(-1.2rem)  translateX(-.1rem)
+      
+// .hamburger__label::after
+//     content: ''
+//     // position: absolute
+//     // top: 3rem
+//     width: 3rem
+//     height: 10px
+//     border: 3px solid $color-green-light
+
 .basket
     grid-column: 4 / 5
     grid-row: 1 / 2
@@ -67,3 +168,7 @@
         grid-column: 3 / 4
         grid-row: 2 / 3
         justify-self: start
+    @include respond(phone)   
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        justify-self: end
