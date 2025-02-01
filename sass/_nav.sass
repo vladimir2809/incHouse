@@ -12,7 +12,7 @@
     grid-column: content-start / content-end
     @include textGreenLight
     font-weight: 700
-    align-content: center
+    //align-content: center
     display: grid
     grid-template-columns: 20rem minmax(0.1rem, 1fr) 42.5rem 5rem
     grid-template-rows: 10rem
@@ -22,7 +22,7 @@
         justify-content: start
     @include respond(phone)
         grid-template-columns: 1fr 
-        grid-template-rows: 5rem 5rem 100vh
+        grid-template-rows: 5rem max-content//5rem 100vh
         //justify-content: space-evenly
         //align-content: center
 
@@ -35,60 +35,110 @@
         grid-column: 1 / -1 //!important
         grid-row: 1 / 2 //!important
         justify-self: center
-
     @include respond(phone)
+        grid-column: 1 / -1 //!important
+        grid-row: 1 / 2 //!important
         justify-self: center
 .navigation
-    grid-column: 1 / 2
-    grid-row: 3 / 4
-    background-color: transparent
-    z-index: 1
-.menu-phone
-    display: none
-    @include respond(phone)
-        position: relative
-        top: -2.5rem
-        background-color: #E1EDE6
-        width: 100%
-        height: 100vh
-        z-index: 100
-        padding: 3rem
-    &__list
-        list-style-type: none
-    &__item
-        margin-bottom: 5rem
-    &__link
-        text-decoration: none
-        color: $color-gray
-.hamburger__checkbox:checked ~ .menu-phone
-    display: block
-.menu
-    align-self: center
     grid-column: 3 / 4
     grid-row: 1 / 2
+    align-self: center
+    z-index: 100
+    // @include respond(tab-land)
+    //     grid-column: 1 / 2
+    //     grid-row: 2 / 3
     @include respond(tab-port)
-        grid-column: 1 / 3
+        grid-column: 1 / 2
         grid-row: 2 / 3
-        justify-self: start
-        padding-left: 3.3rem
     @include respond(phone)
-        display: none
-    &__list
-        display: inline-block
-        list-style-type: none
-        width: 100%
-    &__item  
-        display: inline-block
-        &:not(:last-child)
-            margin-right: 5.5rem         
-            //margin-rigth: 0rem
-        // &:last-child
-        //     @include respond(tab-port)
-        //         grid-column: 4 / 5
-    &__link
-        @include textBlack
-        text-decoration: none 
-        font-weight: 700 
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        align-self: start
+        // display: grid
+        // grid-template-columns: 1fr
+        // grid-template-rows: 5rem 100vh
+        
+        //display: none
+    .menu    
+        @include respond(phone)
+            display: none
+            padding: 3rem 1.5rem
+        &__list
+            list-style-type: none
+        &__item
+            display: inline-block
+            &:not(:last-child)
+                margin-right: 5rem 
+            @include respond(phone)
+                &:not(:last-child)
+                    margin-bottom: 3rem 
+        &__link
+            text-decoration: none
+            @include textBlack
+            font-weight: 700
+.hamburger__checkbox:checked ~ .menu
+    @include respond(phone)
+        display: block
+        align-self: start
+        height: 100vh
+        grid-column: 1 / 2
+        grid-row: 2 / 3 
+        background-color: #E1EDE6
+      
+        .menu__item
+            display: block 
+// .navigation
+//     grid-column: 1 / 2
+//     grid-row: 3 / 4
+//     background-color: transparent
+//     z-index: 1
+// .menu  
+//     @include respond(phone)
+//         display: none
+//         position: relative
+//         top: -2.5rem
+//         background-color: #E1EDE6
+//         width: 100%
+//         height: 100vh
+//         z-index: 100
+//         padding: 3rem
+//         &__list
+//             list-style-type: none
+//         &__item
+//             margin-bottom: 5rem
+//         &__link
+//             text-decoration: none
+//             color: $color-gray
+// .hamburger__checkbox:checked ~ .menu
+//     @include respond(phone)
+//         display: block
+// .menu
+//     align-self: center
+//     grid-column: 3 / 4
+//     grid-row: 1 / 2
+//     @include respond(tab-port)
+//         grid-column: 1 / 3
+//         grid-row: 2 / 3
+//         justify-self: start
+//         padding-left: 3.3rem
+//     @include respond(phone)
+//         display: none
+//     &__list
+//         display: inline-block
+//         list-style-type: none
+//         width: 100%
+//     &__item  
+//         display: inline-block
+//         &:not(:last-child)
+//             margin-right: 5.5rem         
+//             //margin-rigth: 0rem
+//         // &:last-child
+//         //     @include respond(tab-port)
+//         //         grid-column: 4 / 5
+//     &__link
+//         @include textBlack
+//         text-decoration: none 
+//         font-weight: 700 
 .hamburger
     @include respond(tab-land)
         display: none
@@ -98,14 +148,15 @@
         display: inline-block
         grid-column: 1 / 2
         grid-row: 2 / 3
-        align-self: center
+        align-self: start//center
         margin-left: 1.5rem
+        
 .hamburger__checkbox
     display: none
 .hamburger__label-div
     display: none
     position: relative
-    top: -4rem
+    top: .0rem
     left: 1.5rem
     width: 3rem
     height: 10px
@@ -115,6 +166,7 @@
         display: none
     @include respond(phone)
         display: inline-block
+        
     &>span
         display: block
         position: relative
@@ -172,3 +224,4 @@
         grid-column: 1 / 2
         grid-row: 2 / 3
         justify-self: end
+        z-index: 15
