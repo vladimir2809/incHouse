@@ -16,6 +16,9 @@
     @include respond(tab-port)
         grid-template-columns: 40% 60%
         grid-template-rows: 38rem
+    @include respond(phone)
+        grid-template-columns: 100%
+        grid-template-rows: 38rem
     &__img
         grid-column: 1 / 2
         grid-row: 1 / -1
@@ -24,6 +27,8 @@
         @include respond(tab-port)
             height: 85%
             align-self: center
+        @include respond(phone)
+            display: none
     &__right
         grid-column: 2 / 3
         grid-row: 1 / -1
@@ -39,6 +44,12 @@
             width: 28rem
             align-content: start
             padding-top: 3.5rem
+        @include respond(phone)
+            grid-column: 1 / -1
+            grid-row: 1 / -1
+            align-content: start
+            justify-self: start
+            padding-left: 1.5rem
     &__title-1
         font-family: Raleway
         font-size: 6rem

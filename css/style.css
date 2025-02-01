@@ -373,6 +373,12 @@ html {
     grid-template-rows: 38rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .header {
+    grid-template-columns: 100%;
+    grid-template-rows: 38rem;
+  }
+}
 .header__img {
   grid-column: 1/2;
   grid-row: 1/-1;
@@ -384,6 +390,11 @@ html {
     height: 85%;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .header__img {
+    display: none;
   }
 }
 .header__right {
@@ -409,6 +420,16 @@ html {
     -ms-flex-line-pack: start;
         align-content: start;
     padding-top: 3.5rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .header__right {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    justify-self: start;
+    padding-left: 1.5rem;
   }
 }
 .header__title-1 {
@@ -578,6 +599,12 @@ html {
     grid-template-rows: repeat(3, 54rem);
   }
 }
+@media only screen and (max-width: 510px) {
+  .container-cards {
+    grid-template-columns: repeat(auto-fit, 29rem);
+    grid-template-rows: repeat(6, 51.4rem);
+  }
+}
 
 .card {
   width: 35rem;
@@ -597,6 +624,12 @@ html {
     height: 54rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .card {
+    width: 29rem;
+    height: 51.4rem;
+  }
+}
 .card__img {
   width: 31rem;
   margin-bottom: 2rem;
@@ -609,6 +642,13 @@ html {
 @media only screen and (max-width: 690px) {
   .card__img {
     width: 20rem;
+    height: 25rem;
+    margin-bottom: 1.5em;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .card__img {
+    width: 25rem;
     height: 25rem;
     margin-bottom: 1.5em;
   }
@@ -627,6 +667,11 @@ html {
     margin-bottom: 1rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .card__author {
+    font-size: 1.6rem;
+  }
+}
 .card__name {
   font-family: Raleway;
   font-size: 1.8rem;
@@ -641,6 +686,11 @@ html {
     font-size: 2.4rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .card__name {
+    font-size: 2.4rem;
+  }
+}
 .card__descr {
   font-family: Raleway;
   font-size: 1.8rem;
@@ -649,7 +699,12 @@ html {
   color: #2C2D35;
   font-size: 1.8rem;
   margin-bottom: 3rem;
-  height: 3.8rem;
+  height: 1.8rem;
+}
+@media only screen and (max-width: 510px) {
+  .card__descr {
+    font-size: 1.6rem;
+  }
 }
 .card__price {
   font-family: Raleway;
@@ -659,6 +714,11 @@ html {
   color: #598D66;
   font-size: 2.4rem;
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 510px) {
+  .card__price {
+    font-size: 2rem;
+  }
 }
 .card__button {
   width: 31rem;
@@ -672,6 +732,12 @@ html {
 @media only screen and (max-width: 690px) {
   .card__button {
     width: 20rem;
+    height: 5rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .card__button {
+    width: 25rem;
     height: 5rem;
   }
 }
@@ -704,6 +770,11 @@ html {
     background-image: url(../img/newImg2.jpg);
   }
 }
+@media only screen and (max-width: 510px) {
+  .container-new {
+    background-image: url(../img/newImg3.jpg);
+  }
+}
 
 .new {
   grid-column: content-start/content-end;
@@ -717,6 +788,11 @@ html {
 @media only screen and (max-width: 690px) {
   .new {
     padding: 7rem 2rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .new {
+    padding: 5rem 1.5rem;
   }
 }
 .new__cont-title {
@@ -733,6 +809,12 @@ html {
   color: white;
 }
 @media only screen and (max-width: 690px) {
+  .new__title-3 {
+    font-size: 2.4rem;
+    width: 26.1rem;
+  }
+}
+@media only screen and (max-width: 510px) {
   .new__title-3 {
     font-size: 2.4rem;
     width: 26.1rem;
@@ -755,8 +837,23 @@ html {
     width: 45rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .new__paragraph {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    width: 29rem;
+    margin-bottom: 3rem;
+  }
+}
 .new__button {
   background-color: #EEDB6D;
+}
+@media only screen and (max-width: 510px) {
+  .new__button {
+    width: 29rem;
+    height: 5rem;
+    text-align: center;
+  }
 }
 
 .container-ourTeam {
@@ -794,6 +891,11 @@ html {
     grid-gap: 0rem;
   }
 }
+@media only screen and (max-width: 510px) {
+  .ourTeam {
+    padding: 1rem 1.5rem;
+  }
+}
 .ourTeam__cont-img {
   grid-column: 1/2;
   position: relative;
@@ -804,10 +906,29 @@ html {
     grid-row: 1/2;
   }
 }
+@media only screen and (max-width: 510px) {
+  .ourTeam__cont-img {
+    top: 5rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .ourTeam__img-1 {
+    width: 29rem;
+    height: 29rem;
+  }
+}
 .ourTeam__img-2 {
   position: absolute;
   top: -8rem;
   left: 5rem;
+}
+@media only screen and (max-width: 510px) {
+  .ourTeam__img-2 {
+    width: 17rem;
+    height: 32rem;
+    top: -6.4rem;
+    left: 3rem;
+  }
 }
 .ourTeam__cont-text {
   grid-column: 2/3;
@@ -817,6 +938,11 @@ html {
   .ourTeam__cont-text {
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .ourTeam__cont-text {
+    padding-top: 3rem;
   }
 }
 .ourTeam__title-2 {
@@ -835,6 +961,14 @@ html {
 }
 .ourTeam__photo-item {
   margin-right: 3rem;
+}
+@media only screen and (max-width: 510px) {
+  .ourTeam__photo-item {
+    margin-right: 2rem;
+  }
+  .ourTeam__photo-item:last-child {
+    margin-right: 0rem;
+  }
 }
 
 .container-footer {
@@ -857,6 +991,11 @@ html {
 @media only screen and (max-width: 510px) {
   .container-footer {
     grid-template-columns: [full-start content-start] minmax(24rem, 100%) [content-end full-end];
+  }
+}
+@media only screen and (max-width: 510px) {
+  .container-footer {
+    padding: 0;
   }
 }
 
@@ -882,6 +1021,14 @@ html {
     justify-items: center;
   }
 }
+@media only screen and (max-width: 510px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1.5rem 1.5rem;
+    justify-items: left;
+  }
+}
 
 .logo_in_footer {
   -ms-flex-item-align: start;
@@ -891,6 +1038,13 @@ html {
   .logo_in_footer {
     grid-column: 1/2;
     grid-row: 1/2;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .logo_in_footer {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
   }
 }
 
@@ -912,12 +1066,23 @@ html {
     grid-row: 1/2;
   }
 }
+@media only screen and (max-width: 510px) {
+  .contact {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 .contact__telephone {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.3rem;
   text-align: left;
   color: #2C2D35;
+}
+@media only screen and (max-width: 510px) {
+  .contact__telephone {
+    font-size: 1.6rem;
+  }
 }
 .contact__paragraph {
   font-size: 1.8rem;
@@ -943,6 +1108,12 @@ html {
     grid-row: 2/3;
   }
 }
+@media only screen and (max-width: 510px) {
+  .links_count_1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
 
 .links_count_2 {
   grid-column: 4/5;
@@ -960,6 +1131,12 @@ html {
     grid-row: 2/3;
   }
 }
+@media only screen and (max-width: 510px) {
+  .links_count_2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
 
 .links_count_3 {
   grid-column: 5/6;
@@ -975,6 +1152,12 @@ html {
   .links_count_3 {
     grid-column: 3/4;
     grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .links_count_3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
   }
 }
 
@@ -1010,6 +1193,14 @@ html {
   .network {
     grid-column: 1/-1;
     grid-row: 3/4;
+    width: 18rem;
+    justify-self: center;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .network {
+    grid-column: 1/-1;
+    grid-row: 4/5;
     width: 18rem;
     justify-self: center;
   }
